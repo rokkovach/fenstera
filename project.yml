@@ -1,0 +1,41 @@
+name: OpenCodeController
+options:
+  bundleIdPrefix: com.fenstera
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  OpenCodeController:
+    type: application
+    platform: iOS
+    sources:
+      - Sources/OpenCodeController
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.fenstera.app
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_GENERATION: true
+        GENERATE_INFOPLIST_FILE: true
+        SWIFT_STRICT_CONCURRENCY: complete
+        TARGETED_DEVICE_FAMILY: "1,2"
+    info:
+      path: Sources/OpenCodeController/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: Fenstera
+        UILaunchScreen:
+          UIColorName: ""
+          UIImageName: ""
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
